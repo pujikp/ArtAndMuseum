@@ -6,9 +6,14 @@ h1 , h2 , a {
     color : #fff;
     font-family : system-ui;
 }
+h2 {
+    text-align : center;
+    font-size : 60px;
+}
 
 header {
     display : flex;
+    justify-content: space-between;
     h1 {
         font-size: 40px;
         height: 125px;
@@ -16,10 +21,122 @@ header {
         font-weight: 900;
     }
     nav {
+        display : flex;
         button {
-            font-size : 16px;
-            padding : 5%;
-
+            font-size: 18px;
+            padding: 3%;
+            margin: 6px 6px;
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            font-weight: 600;
+            background-color: #323232;
+            color: #fff;
+            border-width: inherit;
+            font-family: system-ui;
         }
     }
+}
+section.search-section {
+
+}
+img.top-img {
+    position: absolute;
+    left: 0px;
+    top: 55%;
+    z-index: -1;
+    left: 10%;
+    width:550px;
+}
+
+.search {
+    margin: 10% 2% 5% 30%;
+    text-align: center;
+}
+input {
+    width: 600px;
+    height: 40px;
+    border-radius: 10px;
+    background: #000;
+    border-color: #595858;
+    border-width: 2px;
+    border-style: solid;
+}
+
+
+.accordion-section {
+    font-family: system-ui;
+    margin-top:15%;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion {
+  color: #fff;
+  padding: 45px 0;
+}
+
+
+.accordion .label::before {
+  content: '+';
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.accordion .content {
+  position: relative;
+  height: 0;
+  font-size: 20px;
+  text-align: justify;
+  width: 780px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Adds a horizontal line between the contents */
+
+.accordion hr {
+  margin-left: 0;
+  border: 0.5px solid #323232;
+}
+
+/* Unhides the content part when active. Sets the height */
+
+.accordion .container.active .content {
+  height: auto;
+}
+
+/* Changes from plus sign to negative sign once active */
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
+}
+
+img.discover-img {
+    width:230px
+}
+
+.content-discover-art {
+    display:flex;
 }
